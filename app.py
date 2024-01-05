@@ -38,23 +38,6 @@ st.write(f"Class: {len(np.unique(y))}")
 ## st.write("Class[3] = :red[Level 3] ||  Class[4] = :red[Level 4]")
 st.write(f'Accuracy = ',accuracy,'%')
 
-# CSS style to position the logo in the top-right corner
-logo_css = """
-    <style>
-        .logo-container {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-        }
-    </style>
-"""
-
-st.markdown(logo_css, unsafe_allow_html=True)
-
-# Logo with adjusted size
-logo = st.image("logo.png", width=100, use_column_width=False)
-st.sidebar.markdown(f'<div class="logo-container">{logo}</div>', unsafe_allow_html=True)
-
 ## Tabs
 tab1, tab2 = st.tabs(["Single-predict","Multi-predict"])
 
