@@ -6,6 +6,17 @@ from imblearn.over_sampling import SMOTE
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import accuracy_score
 
+# Main Page with white backgroung
+st.markdown(
+  """
+  <style>
+    body{
+      background-color:#ffffff; /* White background */ 
+    }
+  """,
+  unsafe_allow_html=True
+)
+
 ## Tab bar
 st.set_page_config(
   page_title = "Heart Disease",
@@ -28,17 +39,6 @@ model = pickle.load(open("model/knn_model.pkl","rb"))
 y_pred = model.predict(X)
 accuracy = accuracy_score(y,y_pred)
 accuracy = round((accuracy * 100),2)
-
-# Main Page with white backgroung
-st.markdown(
-  """
-  <style>
-    body{
-      background-color:#ffffff; /* White background */ 
-    }
-  """,
-  unsafe_allow_html=True
-)
 
 ## Main Page
 st.title(":red[Heart Disease] Classification")
