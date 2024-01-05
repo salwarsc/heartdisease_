@@ -29,6 +29,17 @@ y_pred = model.predict(X)
 accuracy = accuracy_score(y,y_pred)
 accuracy = round((accuracy * 100),2)
 
+# Main Page with white backgroung
+st.markdown(
+  """
+  <style>
+    body{
+      background-color:#ffffff; /* White background */ 
+    }
+  """,
+  unsafe_allow_html=True
+)
+
 ## Main Page
 st.title(":red[Heart Disease] Classification")
 st.write(f"Class: {len(np.unique(y))}")
