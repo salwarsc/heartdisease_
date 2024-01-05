@@ -12,7 +12,7 @@ st.set_page_config(
   page_icon = ":heart:"
 )
 
-df = pd.read_csv('dataset\dfClean.csv')
+df = pd.read_csv('dataset/dfClean.csv')
 X = df.drop("target",axis=1)
 y = df['target']
 
