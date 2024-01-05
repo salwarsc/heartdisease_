@@ -30,13 +30,30 @@ accuracy = accuracy_score(y,y_pred)
 accuracy = round((accuracy * 100),2)
 
 ## Main Page
-logo = st.image("logo.png", use_column_width=True)
+##logo = st.image("logo.png", use_column_width=True)
 st.title(":red[Heart Disease] Classification")
 st.write(f"Class: {len(np.unique(y))}")
 ## st.write("Class[0] = :green[Healty]")
 ## st.write("Class[1] = :orange[Level 1] || Class[2] = :orange[Level 2]")
 ## st.write("Class[3] = :red[Level 3] ||  Class[4] = :red[Level 4]")
 st.write(f'Accuracy = ',accuracy,'%')
+
+# CSS style to position the logo in the top-right corner
+logo_css = """
+    <style>
+        .logo-container {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+"""
+
+st.markdown(logo_css, unsafe_allow_html=True)
+
+# Logo with adjusted size
+logo = st.image("path/to/your/logo.jpg", width=100, use_column_width=False)
+st.sidebar.markdown(f'<div class="logo-container">{logo}</div>', unsafe_allow_html=True)
 
 ## Tabs
 tab1, tab2 = st.tabs(["Single-predict","Multi-predict"])
