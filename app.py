@@ -52,7 +52,7 @@ logo_css = """
 st.markdown(logo_css, unsafe_allow_html=True)
 
 # Logo with adjusted size
-logo = st.image("path/to/your/logo.jpg", width=100, use_column_width=False)
+logo = st.image("logo.png", width=100, use_column_width=False)
 st.sidebar.markdown(f'<div class="logo-container">{logo}</div>', unsafe_allow_html=True)
 
 ## Tabs
