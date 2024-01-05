@@ -30,11 +30,12 @@ accuracy = accuracy_score(y,y_pred)
 accuracy = round((accuracy * 100),2)
 
 ## Main Page
+logo = st.image("logo.png", use_column_width=True)
 st.title(":red[Heart Disease] Classification")
 st.write(f"Class: {len(np.unique(y))}")
-st.write("Class[0] = :green[Healty]")
-st.write("Class[1] = :orange[Level 1] || Class[2] = :orange[Level 2]")
-st.write("Class[3] = :red[Level 3] ||  Class[4] = :red[Level 4]")
+## st.write("Class[0] = :green[Healty]")
+## st.write("Class[1] = :orange[Level 1] || Class[2] = :orange[Level 2]")
+## st.write("Class[3] = :red[Level 3] ||  Class[4] = :red[Level 4]")
 st.write(f'Accuracy = ',accuracy,'%')
 
 ## Tabs
