@@ -6,17 +6,6 @@ from imblearn.over_sampling import SMOTE
 from sklearn.preprocessing import MinMaxScaler
 from sklearn.metrics import accuracy_score
 
-# Main Page with white backgroung
-st.markdown(
-  """
-  <style>
-    body{
-      background-color:#ffffff; /* White background */ 
-    }
-  """,
-  unsafe_allow_html=True
-)
-
 ## Tab bar
 st.set_page_config(
   page_title = "Heart Disease",
